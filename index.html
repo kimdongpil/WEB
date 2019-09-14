@@ -12,41 +12,54 @@
 
       gtag('config', 'UA-147547985-1');
     </script>
+    <script>
+    var Links = {
+      setColor:function (color) {
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+    }
+    }
+    
+    var Body = {
+      setColor:function (color){
+        document.querySelector('body').style.color = color;
+      },
+      setBackgroundColor:function (color) {
+        document.querySelector('body').style.backgroundColor = color;
+      }
+    }
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if (self.value==='night'){
+        body.setBackgroundcolor('black')
+        Body.setColor = ('white');
+        self.value='day';
+
+        Link.setColor('powderblue');
+       } else {
+         body.setBackgroundcolor('white')
+         Body.setColor('black');
+         self.value='night';
+
+         Links.setColor('blue');
+       }
+    </script>
 
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input id="night_day" type="button" value="night"
-    onclick="
-      var target = document.querySelector('body')
-      if(this.value==='night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value='day';
-
-        var alist = document.querySelectorALL('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1;
-        }
-       } else {
-         target.style.backgroundColor = 'white';
-         target.style.color = 'black';
-         this.value='night';
-
-          var alist = document.querySelectorALL('a');
-          var i = 0;
-          while(i < alist.length){
-            alist[i].style.color = 'blue';
-            i = i + 1;
-         }
-       }
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
     ">
     <ol>
       <li><a href="1.html">HTML</a></li>
       <li><a href="2.html">CSS </a></li>
       <li><a href="3.html">JavaScript</a></li>
+      <li><a href="map.html">JavaScript</a></li>
     </ol>
     <h2>WEB</h2>
     <p>
@@ -75,16 +88,7 @@
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
           Disqus.</a></noscript>
     </p>
-    <input type="button" value="night" onclick="
-      if(this.value==='night'){
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        this.value='day';
-       } else{
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        this.value='night';
-       }
-    ">
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
     </body>
 </html>
