@@ -32,7 +32,7 @@
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
 
-        var iwContent = '<div style="padding:5px;">우산동KT앞 주차장 <br><a href="https://map.kakao.com/link/map/우산동KT앞 주차장,35.160626, 126.807182" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/우산동KT앞 주차장,35.160626, 126.807182" style="color:blue" target="_blank">주차장안내</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        var iwContent = '<div style="padding:5px;">우산동KT앞 주차장 <br><a href="https://map.kakao.com/link/map/H우산동KT앞 주차장,35.160626, 126.807182" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/우산동KT앞 주차장,35.160626, 126.807182" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
             iwPosition = new kakao.maps.LatLng(35.160626, 126.807182); //인포윈도우 표시 위치입니다
 
         // 인포윈도우를 생성합니다
@@ -42,7 +42,7 @@
         });
 
         // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-        infowindow.open(cod.jpg)); 
+        infowindow.open(map, marker); 
     </script>
 </body>
 
